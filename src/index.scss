@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Montserrat+Alternates:wght@100;200;300;400;500;600&display=swap');
+
+$font-primary : "Fredoka";
+$font-secondary : "Montserrat Alternates";
+
+$color-black : black;
+$color-white: white;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: $color-white;
+  border-bottom: .5px solid rgb(163, 163, 163);
+
+  &__logo {
+    font-family: $font-primary;
+    color: $color-black;
+    font-size: 24px;
+  }
+
+  &__links > a {
+    text-decoration: none;
+    font-family: $font-secondary;
+    color: $color-black;
+    margin: 10px;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content {
+  max-width: 700px;
+  margin: 40px auto;
+  
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 20px;
+
+  &__preview {
+    padding: 30px 20px;
+    border-radius: 5px;
+    border: .5px solid rgb(211, 211, 211);
+
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+  }
+
+  &__button {
+    
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: 24px;
+
+    &--main {
+      font-family: $font-primary;
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    font-size: 12px;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.btn {
+  padding: 7px 12px;
+  color: $color-white;
+  font-family: $font-primary;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+
+  &__blog {
+    background-color: rgb(230, 46, 46);
+  }
+
+  &__home {
+    background-color: $color-black;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.isError {
+  font-family: $font-secondary;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: red;
+}

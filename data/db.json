@@ -1,0 +1,7 @@
+{
+  "blogs": [
+    { "title": "how to eat", "body": "lorem ipsum ...", "author": "Mario", "id": 1 },
+    { "title": "how to drink", "body": "lorem ipsum ...", "author": "Yoshi", "id": 2 },
+    { "title": "how to sleep", "body": "lorem ipsum ...", "author": "Luigi", "id": 3 }
+  ]
+}
